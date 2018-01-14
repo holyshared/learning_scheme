@@ -11,5 +11,5 @@
 ))
 
 (insertL* "*" "a" '("a" "b" "c"))
-(insertL* "*" "a" '("a" "b" '("d" "e" "a") "c"))
-(insertL* "*" "a" '("a" "b" '("d" "e" '("f" "a" "g") "a") "c"))
+(insertL* "*" "a" '("a" "b" ("d" "e" "a") "c"))
+(insertL* "*" "a" '("a" "b" ("d" "e" ("f" "a" "g") "a") "c"))

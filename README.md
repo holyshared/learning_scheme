@@ -48,3 +48,41 @@
 ## 2018-01-12
 * Scheme手習いの5章を開始
 	* ネストしたリストの処理をちょっとだけやった
+
+## 2018-01-13
+* Scheme手習いの5章の続き
+* **insertR**、**insertL**など
+
+* ## 2018-01-14
+* Scheme手習いの5章の続き
+* **quote**がやっとわかった....
+
+	評価して欲しくないものを、**'()**でラップすればOK。  
+	ネストした構造でも、わざわざつけなくてもいい。
+
+	```scheme
+	;; こうじゃなくていい
+	'('("potato") '("chips" '('("with") "fish")) '("chips"))
+	```	
+
+	下記でOK。
+
+	```scheme
+	;; これでいい
+	'(("potato") ("chips" (("with") "fish")) ("chips"))
+	```	
+
+	これの戻り値が、**'quote**になって困った。
+
+	```scheme
+	(define leftmost
+	  (lambda (l)
+	    (cond
+	      ((pair? (car l)) (leftmost (car l)))
+	      (else (car l))
+	      )
+	))
+
+	(leftmost '('("potato") '("chips" '('("with") "fish")) '("chips"))) ;; NG
+	(leftmost '(("potato") ("chips" (("with") "fish")) ("chips"))) ;; OK
+	```

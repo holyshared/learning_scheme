@@ -12,4 +12,4 @@
 
 (insertR* "*" "a" '("a" "b" "c"))
 (insertR* "*" "a" '("d" "a" "f" "a"))
-(insertR* "*" "a" '("a" '("a" "b" "c") "b" "c" '("d" "a" "f" "a")))
+(insertR* "*" "a" '("a" ("a" "b" "c") "b" "c" ("d" "a" "f" "a")))
