@@ -86,3 +86,5 @@
 	(leftmost '('("potato") '("chips" '('("with") "fish")) '("chips"))) ;; NG
 	(leftmost '(("potato") ("chips" (("with") "fish")) ("chips"))) ;; OK
 	```
+
+* Scheme手習いの6章のをちょっとやった
